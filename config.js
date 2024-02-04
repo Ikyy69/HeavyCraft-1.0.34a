@@ -10,7 +10,7 @@ global.ownername = 'Rzkymlna'
 global.author = 'Heavy Craft'
 global.sessionName = 'Shizuka'
 global.prefa = ['','!','.','🐦','🐤','🗿']
-global.apikey = 'xxxxxxxxx' //ambil dari web ini https://heavycraft.my.id/
+global.apikey = 'xxxxxxxxx' //ambil dari web ini https://rzky.my.id/
 global.sp = '⭔'
 global.mess = {
     success: '✓ Success',

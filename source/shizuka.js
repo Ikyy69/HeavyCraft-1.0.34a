@@ -246,7 +246,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 				setReply(mess.wait)
 				shizuka.sendMessage(m.chat, {
 					image: {
-						url: `https://heavycraft.my.id/api/ephoto/${command}?apikey=${global.apikey}&text=${args}`
+						url: `https://rzky.my.id/api/ephoto/${command}?apikey=${global.apikey}&text=${args}`
 					},
 					caption: `❏ Created By : ${global.botname}\n❏ Type: ${command}`
 				})
@@ -266,7 +266,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 				setReply(mess.wait)
 				shizuka.sendMessage(m.chat, {
 					image: {
-						url: `https://heavycraft.my.id/api/ephoto/${command}?apikey=${global.apikey}&text=${args[0]}&text2=${args[1]}`
+						url: `https://rzky.my.id/api/ephoto/${command}?apikey=${global.apikey}&text=${args[0]}&text2=${args[1]}`
 					},
 					caption: `❏ Created By : ${global.botname}\n❏ Type: ${command}`
 				})
@@ -278,7 +278,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 				setReply(mess.wait)
 				shizuka.sendMessage(m.chat, {
 					image: {
-						url: `https://heavycraft.my.id/api/photooxy/${command}?apikey=${global.apikey}&text=${args[0]}&text2=${args[1]}`
+						url: `https://rzky.my.id/api/photooxy/${command}?apikey=${global.apikey}&text=${args[0]}&text2=${args[1]}`
 					},
 					caption: `❏ Created By : ${global.botname}\n❏ Type: ${command}`
 				})
@@ -306,7 +306,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 				setReply(mess.wait)
 				shizuka.sendMessage(m.chat, {
 					image: {
-						url: `https://heavycraft.my.id/api/photooxy/${command}?apikey=${global.apikey}&text=${args}`
+						url: `https://rzky.my.id/api/photooxy/${command}?apikey=${global.apikey}&text=${args}`
 					},
 					caption: `❏ Created By : ${global.botname}\n❏ Type: ${command}`
 				})
@@ -345,7 +345,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 				setReply(mess.wait)
 				shizuka.sendMessage(m.chat, {
 					image: {
-						url: `https://heavycraft.my.id/api/textpro/${command}?apikey=${global.apikey}&text=${args}`
+						url: `https://rzky.my.id/api/textpro/${command}?apikey=${global.apikey}&text=${args}`
 					},
 					caption: `❏ Created By : ${global.botname}\n❏ Type: ${command}`
 				})
@@ -356,7 +356,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			case 'ttaudio': {
 				if (!q) return setReply('where is the link')
 				setReply(mess.wait)
-				let i = await fetchJson(`https://heavycraft.my.id/api/download/tiktok?url=${q}c&apikey=${global.apikey}`)
+				let i = await fetchJson(`https://rzky.my.id/api/download/tiktok?url=${q}c&apikey=${global.apikey}`)
 				shizuka.sendMessage(m.chat, {
 					audio: {
 						url: i.result.music
@@ -373,7 +373,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			case 'ttvideo': {
 				if (!q) return setReply('where is the link')
 				setReply(mess.wait)
-				axios.get(`https://heavycraft.my.id/api/download/tiktok?url=${q}c&apikey=${global.apikey}`)
+				axios.get(`https://rzky.my.id/api/download/tiktok?url=${q}c&apikey=${global.apikey}`)
 					.then(({
 						data
 					}) => {
@@ -394,7 +394,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			case 'playmp4':
 				if (args.length == 0) return setReply(`Example: ${prefix + command} https://www.youtube.com/watch?v=qZIQAk-BUEc`)
 				setReply(mess.wait)
-				axios.get(`https://heavycraft.my.id/api/download/ytmp4?url=${args[0]}&apikey=${global.apikey}`)
+				axios.get(`https://rzky.my.id/api/download/ytmp4?url=${args[0]}&apikey=${global.apikey}`)
 					.then(({
 						data
 					}) => {
@@ -426,7 +426,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 
 				setReply(mess.wait);
 
-				axios.get(`https://heavycraft.my.id/api/download/ytmp3?url=${args[0]}&apikey=${global.apikey}`)
+				axios.get(`https://rzky.my.id/api/download/ytmp3?url=${args[0]}&apikey=${global.apikey}`)
 					.then(({
 						data
 					}) => {
@@ -460,7 +460,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 
 				setReply(mess.wait);
 
-				axios.get(`https://heavycraft.my.id/api/download/playv2?query=${args[0]}&apikey=${global.apikey}`)
+				axios.get(`https://rzky.my.id/api/download/playv2?query=${args[0]}&apikey=${global.apikey}`)
 					.then(async ({
 						data
 					}) => {
@@ -504,7 +504,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			case 'douyin':
 				if (args.length == 0) return setReply(`Example: ${prefix + command} https://v.douyin.com/iLf6YH2A/`)
 				setReply(mess.wait)
-				axios.get(`https://heavycraft.my.id/api/download/douyin?url=${args[0]}&apikey=${global.apikey}`)
+				axios.get(`https://rzky.my.id/api/download/douyin?url=${args[0]}&apikey=${global.apikey}`)
 					.then(({
 						data
 					}) => {
@@ -533,7 +533,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			case 'likedown':
 				if (args.length == 0) return setReply(`Example: ${prefix + command} https://l.likee.video/v/6k9C2z `)
 				setReply(mess.wait)
-				axios.get(`https://heavycraft.my.id/api/download/like?url=${args[0]}&apikey=${global.apikey}`)
+				axios.get(`https://rzky.my.id/api/download/like?url=${args[0]}&apikey=${global.apikey}`)
 					.then(({
 						data
 					}) => {
@@ -560,7 +560,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			case 'fbdown':
 				if (args.length == 0) return setReply(`Example: ${prefix + command} https://www.facebook.com/alanwalkermusic/videos/277641643524720`)
 				setReply(mess.wait)
-				axios.get(`https://heavycraft.my.id/api/download/fb2?url=${args[0]}&apikey=${global.apikey}`)
+				axios.get(`https://rzky.my.id/api/download/fb2?url=${args[0]}&apikey=${global.apikey}`)
 					.then(({
 						data
 					}) => {
@@ -586,7 +586,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			case 'cocofun':
 				if (args.length == 0) return setReply(`Example: ${prefix + command} https://www.icocofun.com/share/post/qUc04yiC8WapxKtUXRy9dg==`)
 				setReply(mess.wait)
-				axios.get(`https://heavycraft.my.id/api/download/cocofun?url=${args[0]}&apikey=${global.apikey}`)
+				axios.get(`https://rzky.my.id/api/download/cocofun?url=${args[0]}&apikey=${global.apikey}`)
 					.then(({
 						data
 					}) => {
@@ -613,7 +613,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 					})
 				break
 			case 'komikulatest': {
-				let res = await fetch(`https://heavycraft.my.id/api/anime/komiku/latest?apikey=${global.apikey}`);
+				let res = await fetch(`https://rzky.my.id/api/anime/komiku/latest?apikey=${global.apikey}`);
 				let datas = await res.json();
 
 				let teks = `*KOMIKU LATEST*\n\n`;
@@ -629,7 +629,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			break;
 			case 'komikusearch': {
 				if (!q) return ('Mau cari apa?');
-				let res = await fetch(`https://heavycraft.my.id/api/anime/komiku/search?query=${q}&apikey=${global.apikey}`);
+				let res = await fetch(`https://rzky.my.id/api/anime/komiku/search?query=${q}&apikey=${global.apikey}`);
 				let datas = await res.json();
 
 				let teks = `*KOMIKU SEARCH*\n\n`;
@@ -646,7 +646,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			case 'komikudetail': {
 				if (!q) return ('Mau cari apa?')
 				if (!isUrl(args[0]) && !args[0].includes('www.')) return setReply(`Example: ${prefix + command} https://komiku.id/manga/the-reincarnation-of-the-forbidden-archmage/ `)
-				let res = await fetch(`https://heavycraft.my.id/api/anime/komiku/detail?url=${q}&apikey=${global.apikey}`);
+				let res = await fetch(`https://rzky.my.id/api/anime/komiku/detail?url=${q}&apikey=${global.apikey}`);
 				let data = await res.json();
 
 				let teks = `*KOMIKU DETAIL*\n\n`;
@@ -681,7 +681,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			}
 			break;
 			case 'nekopoilatest': {
-				let res = await fetch(`https://heavycraft.my.id/api/anime/nekopoi/latest?apikey=${global.apikey}`);
+				let res = await fetch(`https://rzky.my.id/api/anime/nekopoi/latest?apikey=${global.apikey}`);
 				let datas = await res.json();
 
 				let teks = `*NEKOPOI LATEST*\n\n`;
@@ -697,7 +697,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			break;
 			case 'nekopoisearch': {
 				if (!q) return ('Mau cari apa?')
-				let res = await fetch(`https://heavycraft.my.id/api/anime/nekopoi/search?query=${q}&apikey=${global.apikey}`);
+				let res = await fetch(`https://rzky.my.id/api/anime/nekopoi/search?query=${q}&apikey=${global.apikey}`);
 				let datas = await res.json();
 
 				let teks = `*NEKOPOI SEARCH*\n\n`;
@@ -714,7 +714,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			case 'nekopoidetail': {
 				if (!q) return ('Mau cari apa?')
 				if (!isUrl(args[0]) && !args[0].includes('www.')) return setReply(`Example: ${prefix + command} https://nekopoi.care/l2d-uncensored-aoi-and-inosuke-demon-slayer-xtremetoons/`)
-				let res = await fetch(`https://heavycraft.my.id/api/anime/nekopoi/detail?url=${q}&apikey=${global.apikey}`);
+				let res = await fetch(`https://rzky.my.id/api/anime/nekopoi/detail?url=${q}&apikey=${global.apikey}`);
 				let data = await res.json();
 
 				let teks = `*NEKOPOI DETAIL*\n\n`;
@@ -738,7 +738,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			}
 			break;
 			case 'quotesanime': {
-				let res = await fetch(`https://heavycraft.my.id/api/anime/quotesanime?apikey=${global.apikey}`);
+				let res = await fetch(`https://rzky.my.id/api/anime/quotesanime?apikey=${global.apikey}`);
 				let datas = await res.json();
 
 				let teks = `*QUOTES ANIME*\n\n`;
@@ -756,7 +756,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			}
 			break;
 			case 'loli': {
-				let bufs = await getBuffer(`https://heavycraft.my.id/api/anime/loli?apikey=${global.apikey}`)
+				let bufs = await getBuffer(`https://rzky.my.id/api/anime/loli?apikey=${global.apikey}`)
 				shizuka.sendMessage(m.chat, {
 					image: bufs,
 					caption: `Made by ${global.botname}`
@@ -766,7 +766,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			}
 			break
 			case 'waifu': {
-				let bufs = await getBuffer(`https://heavycraft.my.id/api/anime/waifu?apikey=${global.apikey}`)
+				let bufs = await getBuffer(`https://rzky.my.id/api/anime/waifu?apikey=${global.apikey}`)
 				shizuka.sendMessage(m.chat, {
 					image: bufs,
 					caption: `Made by ${global.botname}`
@@ -776,7 +776,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			}
 			break
 			case 'husbu': {
-				let bufs = await getBuffer(`https://heavycraft.my.id/api/anime/husbu?apikey=${global.apikey}`)
+				let bufs = await getBuffer(`https://rzky.my.id/api/anime/husbu?apikey=${global.apikey}`)
 				shizuka.sendMessage(m.chat, {
 					image: bufs,
 					caption: `Made by ${global.botname}`
@@ -786,7 +786,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			}
 			break
 			case 'cerpencinta': {
-				let res = await fetch(`https://heavycraft.my.id/api/random/cerpen/cinta?apikey=${global.apikey}`);
+				let res = await fetch(`https://rzky.my.id/api/random/cerpen/cinta?apikey=${global.apikey}`);
 				let data = await res.json();
 
 				let teks = `*CERPEN CINTA*\n\n`;
@@ -802,7 +802,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			}
 			break;
 			case 'cerpensahabat': {
-				let res = await fetch(`https://heavycraft.my.id/api/random/cerpen/sahabat?apikey=${global.apikey}`);
+				let res = await fetch(`https://rzky.my.id/api/random/cerpen/sahabat?apikey=${global.apikey}`);
 				let data = await res.json();
 
 				let teks = `*CERPEN SAHABAT*\n\n`;
@@ -818,7 +818,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			}
 			break;
 			case 'cerpenperjuangan': {
-				let res = await fetch(`https://heavycraft.my.id/api/random/cerpen/perjuangan?apikey=${global.apikey}`);
+				let res = await fetch(`https://rzky.my.id/api/random/cerpen/perjuangan?apikey=${global.apikey}`);
 				let data = await res.json();
 
 				let teks = `*CERPEN PERJUANGAN*\n\n`;
@@ -834,7 +834,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			}
 			break;
 			case 'cerpenhoror': {
-				let res = await fetch(`https://heavycraft.my.id/api/random/cerpen/horor?apikey=${global.apikey}`);
+				let res = await fetch(`https://rzky.my.id/api/random/cerpen/horor?apikey=${global.apikey}`);
 				let data = await res.json();
 
 				let teks = `*CERPEN HOROR*\n\n`;
@@ -850,7 +850,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			}
 			break;
 			case 'cerpenlucu': {
-				let res = await fetch(`https://heavycraft.my.id/api/random/cerpen/lucu?apikey=${global.apikey}`);
+				let res = await fetch(`https://rzky.my.id/api/random/cerpen/lucu?apikey=${global.apikey}`);
 				let data = await res.json();
 
 				let teks = `*CERPEN LUCU*\n\n`;
@@ -866,7 +866,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			}
 			break;
 			case 'cerpenjawa': {
-				let res = await fetch(`https://heavycraft.my.id/api/random/cerpen/jawa?apikey=${global.apikey}`);
+				let res = await fetch(`https://rzky.my.id/api/random/cerpen/jawa?apikey=${global.apikey}`);
 				let data = await res.json();
 
 				let teks = `*CERPEN BAHASA JAWA*\n\n`;
@@ -884,7 +884,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			case 'githubstalker':
 				if (args.length == 0) return m.reply(`Example: ${prefix + command} Ikyy69`)
 				m.reply(mess.wait)
-				axios.get(`https://heavycraft.my.id/api/stalk/github?username=${args[0]}&apikey=${global.apikey}`)
+				axios.get(`https://rzky.my.id/api/stalk/github?username=${args[0]}&apikey=${global.apikey}`)
 					.then(({
 						data
 					}) => {
@@ -920,7 +920,7 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 			case 'npmstalker':
 				if (!q) return setReply(`Example : ${prefix + command} zhirrr-api|zhirrr`)
 				let [query, hostname] = q.split`|`
-				axios.get(`https://heavycraft.my.id/api/stalk/npm?query=${query}&hostname=${hostname}&apikey=${global.apikey}`)
+				axios.get(`https://rzky.my.id/api/stalk/npm?query=${query}&hostname=${hostname}&apikey=${global.apikey}`)
 					.then(({
 						data
 					}) => {
@@ -974,7 +974,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 			case 'ssweb': {
 				if (!q) return setReply("Masukan Link")
 				if (!isUrl(args[0]) && !args[0].includes('www.')) return setReply(`Example: ${prefix + command} google.com `)
-				let bufs = await getBuffer(`https://heavycraft.my.id/api/maker/ssweb?url=${q}&apikey=${global.apikey}`)
+				let bufs = await getBuffer(`https://rzky.my.id/api/maker/ssweb?url=${q}&apikey=${global.apikey}`)
 				shizuka.sendMessage(m.chat, {
 					image: bufs,
 					caption: `Made by ${global.botname}`
@@ -989,7 +989,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!/image/.test(mime)) return setReply(`*Send/Reply Image With Caption* ${prefix + command}`)
 				let media = await shizuka.downloadAndSaveMediaMessage(quoted)
 				let anu = await TelegraPh(media)
-				let buf = await getBuffer(`https://heavycraft.my.id/api/maker/meme?text=${text1}&text2=${text2}&url=${anu}&apikey=${global.apikey}`)
+				let buf = await getBuffer(`https://rzky.my.id/api/maker/meme?text=${text1}&text2=${text2}&url=${anu}&apikey=${global.apikey}`)
 				shizuka.sendMessage(m.chat, {
 					image: buf,
 					caption: `Made by ${global.botname}`
@@ -1001,7 +1001,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 			case 'tiktoksearch': {
 				if (!text) return setReply(`Example: ${prefix + command} Cosplay`);
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/tiktoksearch?query=${args[0]}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/tiktoksearch?query=${args[0]}&apikey=${global.apikey}`);
 					const results = response.data.result;
 
 					if (results.length > 0) {
@@ -1030,7 +1030,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} Cosplay`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/pinterest?query=${args[0]}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/pinterest?query=${args[0]}&apikey=${global.apikey}`);
 					const results = response.data.result;
 
 					if (results.length > 0) {
@@ -1057,7 +1057,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} Cosplay`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/image?query=${args[0]}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/image?query=${args[0]}&apikey=${global.apikey}`);
 					const results = response.data.result;
 
 					if (results.length > 0) {
@@ -1084,7 +1084,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} Grand Theft Auto V`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/steam?query=${args[0]}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/steam?query=${args[0]}&apikey=${global.apikey}`);
 					const results = response.data.result;
 
 					if (results.length > 0) {
@@ -1111,7 +1111,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} PUBG MOBILE`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/playstore?query=${args[0]}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/playstore?query=${args[0]}&apikey=${global.apikey}`);
 					const results = response.data.result;
 
 					if (results.length > 0) {
@@ -1142,7 +1142,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} Senja`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/musixmatch?query=${args[0]}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/musixmatch?query=${args[0]}&apikey=${global.apikey}`);
 					const result = response.data.result;
 
 					if (result) {
@@ -1167,7 +1167,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} kakak tiri`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/cersex?query=${args[0]}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/cersex?query=${args[0]}&apikey=${global.apikey}`);
 					const result = response.data.result;
 
 					if (result) {
@@ -1192,7 +1192,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} Whatsapp`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/sfile?query=${args[0]}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/sfile?query=${args[0]}&apikey=${global.apikey}`);
 					const results = response.data.result;
 
 					if (results.length > 0) {
@@ -1220,7 +1220,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} Moms`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/xnxx?query=${text}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/xnxx?query=${text}&apikey=${global.apikey}`);
 					const results = response.data.result;
 
 					if (results.length > 0) {
@@ -1248,7 +1248,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} Moms`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/xvideos?query=${text}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/xvideos?query=${text}&apikey=${global.apikey}`);
 					const results = response.data.result;
 
 					if (results.length > 0) {
@@ -1276,7 +1276,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} patrick`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/sticker?query=${text}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/sticker?query=${text}&apikey=${global.apikey}`);
 					const results = response.data.result;
 
 					if (results.length > 0) {
@@ -1304,7 +1304,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} patrick`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/sticker?query=${text}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/sticker?query=${text}&apikey=${global.apikey}`);
 					const results = response.data.result;
 
 					if (results.length > 0) {
@@ -1333,7 +1333,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} patrick`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/wattpad?query=${text}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/wattpad?query=${text}&apikey=${global.apikey}`);
 					const results = response.data.result.data;
 
 					if (results.length > 0) {
@@ -1363,7 +1363,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 			case 'recipes': {
 				if (!text) return setReply(`Example: ${prefix + command} Telur`);
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/recipes?query=${text}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/recipes?query=${text}&apikey=${global.apikey}`);
 					const result = response.data.result;
 
 					if (result) {
@@ -1388,7 +1388,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} WhatsApp Messenger`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/apkmirror?query=${args[0]}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/apkmirror?query=${args[0]}&apikey=${global.apikey}`);
 					const results = response.data.result;
 
 					if (results.length > 0) {
@@ -1416,7 +1416,7 @@ ${ef}❏ ${prefix}cerpenmenu${ef}
 				if (!text) return setReply(`Example: ${prefix + command} Nanti Kita Seperti Ini`);
 
 				try {
-					const response = await axios.get(`https://heavycraft.my.id/api/search/scsearch?query=${args[0]}&apikey=${global.apikey}`);
+					const response = await axios.get(`https://rzky.my.id/api/search/scsearch?query=${args[0]}&apikey=${global.apikey}`);
 					const results = response.data.result;
 
 					if (results.length > 0) {

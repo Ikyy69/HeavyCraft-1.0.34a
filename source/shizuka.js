@@ -917,6 +917,40 @@ module.exports = shizuka = async (shizuka, m, chatUpdate, store) => {
 					})
 					.catch(console.error)
 				break
+				case 'tiktokviews': {
+				try {
+					if (!args[0]) return conn.reply(m.chat, `Masukkan Url!\n\ncontoh:\n${usedPrefix + command} https://www.tiktok.com/@przxmamiellio/video/7331202523023346949`, m);
+					setReply('Sedang diproses, mohon tunggu...');
+					
+					const apiEndpoint = `https://rzky.my.id/api/tools/tiktokviews?apikey=${global.apikey}&url=${args[0]}`;
+					const get = await fetch(apiEndpoint);
+					const js = await get.json();
+				
+					if (js.result) {
+					  const {
+						service,
+						status,
+						quantity,
+						data
+					  } = js.result;
+				
+					  if (js.result.msg === "Masih terdapat pesanan pending dengan target yang sama.") {
+						setReply(`_*${js.result.msg}*_`);
+					  } else {
+						let message = `❏ Service : ${service}\n❏ Status : ${status}\n❏ Jumlah : ${quantity}\n❏ Data : ${data}\n`;
+						await setReply(message);
+					  }
+					} else {
+						setReply(`_*Tidak ada hasil atau terjadi kesalahan!*_`);
+					}
+				  } catch (e) {
+					console.error(e);
+					if (m.sender) {
+					  setReply(`_*Terjadi kesalahan!*_`);
+					}
+				  }
+				};
+			break
 			case 'npmstalker':
 				if (!q) return setReply(`Example : ${prefix + command} zhirrr-api|zhirrr`)
 				let [query, hostname] = q.split`|`
